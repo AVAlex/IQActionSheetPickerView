@@ -29,6 +29,8 @@
 NSString * const kIQActionSheetAttributesForNormalStateKey = @"kIQActionSheetAttributesForNormalStateKey";
 /// Identifies an attributed string of the toolbar title for highlighted state.
 NSString * const kIQActionSheetAttributesForHighlightedStateKey = @"kIQActionSheetAttributesForHighlightedStateKey";
+/// Identifies an attributed string of the toolbar title for highlighted state.
+NSString * const kIQActionSheetAttributesForTitleKey = @"kIQActionSheetAttributesForTitleKey";
 
 
 @implementation IQActionSheetToolbar
@@ -68,13 +70,17 @@ NSString * const kIQActionSheetAttributesForHighlightedStateKey = @"kIQActionShe
     //  Create a fake button to maintain flexibleSpace between cancelButton and titleLabel.(Otherwise the titleLabel will lean to the left）
     
     //  Create a cancel button to show on keyboard to resign it. Adding a selector to resign it.
-    _cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:nil action:nil];
+
+    //_cancelButton =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:nil action:nil];
+    _cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStyleDone target:nil action:nil];
     
     //  Create a title button to show on toolBar for the title you need.
     _titleButton =[[IQActionSheetTitleBarButtonItem alloc] initWithTitle:nil];
 
     //  Create a done button to show on keyboard to resign it. Adding a selector to resign it.
-    _doneButton =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:nil action:nil];
+    
+    // _doneButton =[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:nil action:nil];
+    _doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:nil action:nil];
     
     [self refreshToolbarItems];
 }
@@ -285,6 +291,11 @@ NSString * const kIQActionSheetAttributesForHighlightedStateKey = @"kIQActionShe
     if (attributesForCancelButtonnHighlightedState != nil && [attributesForCancelButtonnHighlightedState isKindOfClass:[NSDictionary class]]) {
         [self.cancelButton setTitleTextAttributes:(NSDictionary *)attributesForCancelButtonnHighlightedState forState:UIControlStateHighlighted];
     }
+    
+    id attributesForCancelButtonTitle = [cancelButtonAttributes objectForKey:  kIQActionSheetAttributesForTitleKey];
+    if (attributesForCancelButtonTitle != nil && [attributesForCancelButtonTitle isKindOfClass:[NSString class]]) {
+        [self.cancelButton setTitle:(NSString *)attributesForCancelButtonTitle];
+    }
 }
 
 /**
@@ -301,6 +312,11 @@ NSString * const kIQActionSheetAttributesForHighlightedStateKey = @"kIQActionShe
     id attributesForDoneButtonnHighlightedState = [doneButtonAttributes objectForKey:  kIQActionSheetAttributesForHighlightedStateKey];
     if (attributesForDoneButtonnHighlightedState != nil && [attributesForDoneButtonnHighlightedState isKindOfClass:[NSDictionary class]]) {
         [self.doneButton setTitleTextAttributes:(NSDictionary *)attributesForDoneButtonnHighlightedState forState:UIControlStateHighlighted];
+    }
+    
+    id attributesForDoneButtonTitle = [doneButtonAttributes objectForKey:  kIQActionSheetAttributesForTitleKey];
+    if (attributesForDoneButtonTitle != nil && [attributesForDoneButtonTitle isKindOfClass:[NSString class]]) {
+        [self.doneButton setTitle:(NSString *)attributesForDoneButtonTitle];
     }
 }
 

@@ -1,5 +1,5 @@
 PODS:
-  - IQActionSheetPickerView (1.0.5)
+  - IQActionSheetPickerView (1.0.7)
 
 DEPENDENCIES:
   - IQActionSheetPickerView (from `.`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: .
 
 SPEC CHECKSUMS:
-  IQActionSheetPickerView: 0340e1df17ef370dc005f45dce86d9c6da72e405
+  IQActionSheetPickerView: 156b0f6a186adde7654e60a588da406f7d02618e
 
 PODFILE CHECKSUM: ae2fed1d52826c80f1031ea4dfbdd5cfce1feef2
 

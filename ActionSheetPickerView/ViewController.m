@@ -69,11 +69,13 @@
 
     pickerView.actionSheetPickerStyle = IQActionSheetPickerStyleTextPicker;
     pickerView.titlesForComponents = @[@[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12"],@[@"AM",@"PM"]];
+    pickerView.actionToolbar.cancelButtonAttributes = @{kIQActionSheetAttributesForTitleKey : @"Chiudi!"};
+    pickerView.actionToolbar.doneButtonAttributes = @{kIQActionSheetAttributesForTitleKey : @"Vai!"};
+    
 //    pickerView.actionToolbar.tintColor = [UIColor blueAppColor];
     
     pickerView.selectedTitles = @[@"5", @"PM"];
     [pickerView show];
-
     
 //     IQActionSheetPickerView *picker = [[IQActionSheetPickerView alloc] initWithTitle:@"Single Picker" delegate:self];
 //    picker.actionToolbar.titleButton.titleFont = [UIFont systemFontOfSize:12];

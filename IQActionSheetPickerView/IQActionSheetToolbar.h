@@ -31,6 +31,8 @@ extern NSString * _Nonnull const kIQActionSheetAttributesForNormalStateKey;
 /// Identifies an attributed string of the toolbar button title for highlighted state.
 extern NSString * _Nonnull const kIQActionSheetAttributesForHighlightedStateKey;
 
+extern NSString * _Nonnull const kIQActionSheetAttributesForTitleKey;
+
 
 @interface IQActionSheetToolbar : UIToolbar <UIInputViewAudioFeedback>
 

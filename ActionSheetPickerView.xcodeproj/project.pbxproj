@@ -156,7 +156,7 @@
 				ORGANIZATIONNAME = Iftekhar;
 				TargetAttributes = {
 					E640EA5D182EADC100151E83 = {
-						DevelopmentTeam = 7UUTF6T5P9;
+						DevelopmentTeam = FZEMQ2858C;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -369,7 +369,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FZEMQ2858C;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ActionSheetPickerView/ActionSheetPickerView-Prefix.pch";
 				INFOPLIST_FILE = "ActionSheetPickerView/ActionSheetPickerView-Info.plist";
@@ -393,7 +393,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FZEMQ2858C;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ActionSheetPickerView/ActionSheetPickerView-Prefix.pch";
 				INFOPLIST_FILE = "ActionSheetPickerView/ActionSheetPickerView-Info.plist";
